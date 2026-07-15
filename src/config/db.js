@@ -61,7 +61,7 @@ export const initDb = async () => {
     console.log("[AUTH-DB] Credentials table verified/created.");
 
     // Seed default admin login credentials if not present
-    const defaultEmail = "admin@rbac.com";
+    const defaultEmail = "admin@gmail.com";
     const existing = await dbGet("SELECT id FROM credentials WHERE email = ?", [defaultEmail]);
 
     if (!existing) {
